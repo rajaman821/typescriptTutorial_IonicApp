@@ -1,0 +1,7 @@
+{
+  "name": "typecriptApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

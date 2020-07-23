@@ -1,0 +1,31 @@
+<ion-app style="--border:none;">
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar style="--ion-background-color:linear-gradient(to bottom left,#C1C3F3,#809FFC,#9B63F8);">
+          <ion-title style="color:#ffffff">Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content style="--ion-background-color:linear-gradient(#E7E7E5,#EBEBEF );">
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item  [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon" style="color:#9B63F8;"></ion-icon>
+              <ion-label style="color:palevioletred">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-item (click)="share()" >
+            <ion-icon name="share" style="color:#9B63F8;cursor:pointer;"></ion-icon><ion-label style="margin-left:31px;color:palevioletred;cursor:pointer;"> Share Us</ion-label>
+          </ion-item>
+          <ion-item  (click)="rate()">
+            <ion-icon name="star-half" style="color:#9B63F8;cursor:pointer;"></ion-icon><ion-label  style="margin-left:31px;color:palevioletred;cursor:pointer;"> Rate App</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+

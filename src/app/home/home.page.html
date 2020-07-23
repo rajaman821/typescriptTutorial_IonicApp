@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div *ngIf="userArr==null">
+  <h6>Please enable internet to download content for first time and enjoy the app.</h6>
+ </div> -->
+
+  <div class="contents" *ngFor="let user of userArr" (click)="pass(user.topic_id)">
+    <span>{{user?.topic_name}}</span>
+
+  </div>
+
+</ion-content>

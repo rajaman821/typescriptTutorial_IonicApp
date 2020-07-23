@@ -1,0 +1,563 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Interview Questions
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div padding>
+<h6>Q1. What is TypeScript and why do we need it?</h6>
+<p>Ans. JavaScript is the only client side language universally supported by all browsers. But JavaScript is not the best
+designed language. It’s not a class-based object-oriented language, doesn’t support class based inheritance, unreliable
+dynamic typing and lacks in compile time error checking. And TypeScript addresses all these problems. In other words,
+TypeScript is an attempt to “fix” JavaScript problems.
+
+TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict superset
+of JavaScript, and adds optional static typing and class-based object-oriented programming to the language. TypeScript
+is quite easy to learn and use for developers familiar with C#, Java and all strong typed languages. At the end of day
+“TypeScript is a language that generates plain JavaScript files.”
+
+As stated on Typescript official website, “TypeScript lets you write JavaScript the way you really want to. TypeScript
+is a typed superset of JavaScript that compiles to plain JavaScript. Any browser. Any host. Any OS. Open Source.” Where
+“typed” means that it considers the types of variables, parameters and functions.</p>
+
+<h6>Q2. What are the benefits of TypeScript?</h6>
+<p>Ans. TypeScript has following benefits.
+
+<li>1.It helps in code structuring.</li><br>
+<li>2.Use class based object oriented programming.</li><br>
+<li>3.Impose coding guidelines.</li><br>
+<li>4.Offers type checking.</li><br>
+<li>5.Compile time error checking.</li><br>
+<li>6.Intellisense.</li><br>
+
+</p>
+
+
+<h6>Q3. What are different components of TypeScript?</h6>
+<p>Ans. There are mainly 3 components of TypeScript .
+
+Language – The most important part for developers is the new language. The language consist of new syntax, keywords and
+allows you to write TypeScript.
+Compiler – The TypeScript compiler is open source, cross-platform and open specification, and is written in TypeScript.
+Compiler will compile your TypeScript into JavaScript. And it will also emit error, if any. It can also help in
+concating different files to single output file and in generating source maps.
+Language Service – TypeScript language service which powers the interactive TypeScript experience in Visual Studio, VS
+Code, Sublime, the TypeScript playground and other editor.</p>
+
+<h6>Q4. How can you get TypeScript and install it?</h6>
+<p>Ans. TypeScript can be installed and managed via npm, the Node.js package manager. To install TypeScript, first ensure
+the npm is installed properly. And then run following command to install TypeScript globally on your system.<br>
+<br>
+
+
+<b>npm install -g typescript</b><br><br>
+
+TypeScript is included in Visual Studio 2013 Update 2 and Visual Studio 2015 by default. TypeScript also provides
+support for other editors like Visual Studio Code, sublime, Emacs and Vim.</p>
+
+<h6>Q5. How do you compile TypeScript files?</h6>
+<p>Ans. The extension for any TypeScript file is “.ts”. And any JavaScript file is TypeScript file as it is a superset of
+JavaScript. So change extension of “.js” to “.ts” file and your TypeScript file is ready. To compile any .ts file into
+.js use following command.<br><br>
+
+
+<b>tsc TypeScript File Name</b><br><br>
+  For example, to compile “Helloworld.ts”<br><br>
+
+  
+<b>  tsc helloworld.ts</b><br><br>
+  And the result would be helloworld.js</p>
+
+  <h6> Q6. Is it possible to combine multiple .ts files into a single .js file?</h6>
+ <p> Ans. Yes, it possible. While compiling add <b>--outFILE [OutputJSFileName] </b>option.<br><br>
+
+  
+  <b>tsc --outFile comman.js file1.ts file2.ts file3.ts</b><br><br>
+  This will compile all 3 “.ts” file and output into single “comman.js” file. And what will happen if you don’t provide
+  a output file name.<br><br>
+
+  
+  <b>tsc --outFile file1.ts file2.ts file3.ts</b><br><br>
+  In this case, file2.ts and file3.ts will be compiled and the output will be placed in file1.ts. So now your file1.ts
+  contains JavaScript code.</p>
+
+  <h6>Q7. Is it possible to compile .ts automatically with real time changes in .ts file?</h6>
+<p>  Ans. Yes. Using --watch compiler option this can be achieved.<br><br>
+
+  
+  <b>tsc --watch file1.ts</b><br><br>
+  This will first compile file1.ts in file.js and watch for the file changes. As soon as there is any change detected,
+  it will compile it again. But you need to ensure that command prompt must not be closed, used with --watch option.</p>
+
+  
+
+  <h6>Q8. Does TypeScript support all object oriented principles?</h6>
+ <p> Ans. The answer is YES. There are 4 main principles to Object Oriented Programming: Encapsulation, Inheritance,
+  Abstraction, and Polymorphism. TypeScript can implement all four of them with its smaller and cleaner syntax. Read
+  Write Object-Oriented JavaScript with TypeScript.</p>
+
+  <h6>Q9. Which object oriented terms are supported by TypeScript?</h6>
+  <p>Ans. TypeScript supports following object oriented terms.
+
+<li>1.Modules</li><br>
+ <li> 2.Classes</li><br>
+  <li>3.Interfaces</li><br>
+ <li> 4.Data Types</li><br>
+  <li>5.Member functions</li><br>
+  
+
+  </p>
+   <h6>Q10. Which are the different data types supported by TypeScript?</h6>
+<p>  Ans. TypeScript supports following data types.
+
+  <li>1.Boolean </li><br>
+  <li>2.Number </li><br>
+  <li>3.String</li><br>
+  <li>4.Array</li><br>
+  <li>5.Enum</li><br><br>
+  
+
+ </p>
+  
+ <h6>Q11. How TypeScript is optionally statically typed language?</h6>
+  <p>Ans. TypeScript is referred as optionally statically typed, which means you can ask the compiler to ignore the type of
+  a variable. Using any data type, we can assign any type of value to the variable. TypeScript will not give any error
+  checking during compilation.<br><br>
+
+  </p>  
+  <h6>Q12. What are modules in TypeScript?</h6>
+  <p>Ans. Modules are the way to organize code in TypeScript. Modules don’t have any features, but can contain classes and
+  interfaces. It is same like namespace in C#.</p>
+
+  <h6>Q13. What are classes in TypeScript?</h6>
+  <p>Ans. The concept of classes is very similar to .Net/Java. A Class can have constructor, member variables, properties
+  and methods. TypeScript also allows access modifiers “private” and “public” for member variables and functions.</p>
+
+<h6>  Q14. How do you implement inheritance in TypeScript?</h6>
+  <p>Ans. Using <b>extends</b> keyword, we can implement inheritance.<br><br>
+
+  </p>
+  
+
+
+  <h6>Q15. What are disadvantages of TypeScript?</h6>
+  <p>Ans. Well, TypeScript is great but there are some disadvantage as well.
+
+  TypeScript is just another way to write JavaScript. It doesn’t fix the problems of JavaScript. It just creates an
+  illusion that it does.<br>
+  One more tool to learn.<br>
+  TypeScript has dependency on type definition files, if you wish to use any existing JavaScript libraries.<br>
+  Quality of type definition files is a concern as how can you be sure the definitions are correct?<br>
+  Frequent releases of new versions JavaScript library is also a pain area. Because if their type definition files are
+  not updated then you can’t use them instantly.<br>
+  In order to run the application in the browser, a compile step is required to transform TypeScript into JavaScript.
+  Web developers are using JavaScript from decades and TypeScript doesn’t bring anything new.<br>
+  To use any third party library, definition file is you need. And not all the third party library have definition file
+  available.<br>
+  That’s all folk. If you have something to add in this list, please mention in comments section. Meanwhile, share this
+  in your network and spread this to help others.<br></p>  
+
+  <h6>Q16. How To Generate Typescript Definition File From Any .ts File?</h6>
+  
+  
+  <p>Ans. You can generate TypeScript definition file from any .ts file via tsc compiler. Generating a TypeScript definition will
+  make your TypeScript file reusable.<br><br>
+  
+  <b>tsc --declaration file1.ts</b>
+  </p>
+  
+ <h6> Q17. What Is Tsconfig.json File?</h6>
+  
+  <p>Ans.The presence of a tsconfig.json file in a directory indicates that the directory is the root of a TypeScript project.
+  The tsconfig.json file specifies the root files and the compiler options required to compile the project. And using this
+  file, we can streamline building TypeScript project</p>
+
+  <h6>Q18 Does TypeScript support all object oriented principles?</h6>
+
+<p>Ans.  The answer is YES. There are 4 main principles to Object Oriented Programming:
+  
+  <li>1.Encapsulation,</li><br>
+  <li>2.Inheritance,</li><br>
+  <li>3.Abstraction,</li><br>
+  <li>4.Polymorphism.</li><br>
+  TypeScript can implement all four of them with its smaller and cleaner syntax.</p>
+
+   <h6> Q19. What is a TypeScript Map file?</h6>
+  
+ <p>Ans. .map files are source map files that let tools map between the emitted JavaScript code and the TypeScript source files
+  that created it. Many debuggers (e.g. Visual Studio or Chrome's dev tools) can consume these files so you can debug the
+  TypeScript file instead of the JavaScript file.</p>
+
+
+  <h6>Q20. What is namespace in Typescript? How to declare a namespace in Typescript?</h6>
+  <p>Ans. Internal Modules are known as namespaces in Typescript.Namespaces are used to maintain the legacy code of typescript
+  interally. A namespace is simply a way to logically group related classes or interfaces in a wrapper.
+  Synatax for creating namespace in Typescript</p>
+
+  <h6>Q21. List some features of Typescript?</h6>
+<p>Ans. Features of Typescript are:-
+<li>1.Typescript can be compiled to all major versions of Javascript(ES3,ES5,ES6,ES7).</li><br>
+<li>2.Typescript can be used for cross –browser development and is an open source project.</li><br>
+<li>3.Typescript is a superset of JavaScript that provides typed nature to your code.</li><br>
+<li>4.It is used to avoid the disadvantages of JavaScript like Typescript is designed to handle the needs of complex programs.</li><br>
+<li>5.Typescript was debuted as a beta programming language on October 1, 2012 and since then has gone through many versions
+with improved capabilities.</li><br>
+<li>6.Another key feature of Typescript is in version Typescript 2.6 that covers error suppression comments.</li><br>
+<li>7.Typescript is more predictable and is generally easier to debug.</li><br>
+</p>
+
+<h6>Q22. Who developed Typescript?</h6>
+<p>Ans. Typescript was developed by Anders Hejlsberg in 2012, who is the lead architect of C# and the creator of Delphi and
+Turbo Pascal. Typescript is a free and open source programming language maintained by Microsoft. It is a superset of
+JavaScript. It was developed for the development of large application</p>
+
+
+<h6>Q23. What are Mixins?</h6>
+<p>In Javascript Mixins are another way of building up classes from reusable components is to build them by combining
+simpler partial classes.</p>
+
+<h6>Q24. Explain Decorators in Typescript? List type of Decorators available in Typescript?</h6>
+<p>Ans. Decorators are function that supports annotating or modifying classes its members.Its allow way to add both annotations
+and a meta-programming syntax for class declarations and members. Decorators are an experimental feature of Typescript
+and maybe change in future releases.<br>
+
+You can enable Decorators using the command line or editing your tsconfig.json<br>
+
+Enabling Decorators in TypeScript via command line<br>
+
+<b>tsc --target ES5 --experimentalDecorators</b>
+</p>
+
+<h6>Q25.What are Modules in Typescript?</h6>
+<p>Ans. Modules are powerful way to share code between files.By using modules effectively in your project you can keep you file
+size small and dependencies clear.<br>
+Modules are executed within their own scope, not in the global scope; this means that variables, functions, classes,
+etc. declared in a module are not visible outside the module unless they are explicitly exported using one of the export
+forms.</p>
+</div> -->
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 1: What is Angular?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Angular is a TypeScript-based open-source web application framework, developed and maintained by Google. It offers
+      an easy and powerful way of building front end web-based applications.
+
+      Angular integrates a range of features like declarative templates, dependency injection, end-to-end tooling, etc.
+      that facilitates web application development.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 2: Please explain the various features of Angular.</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      There are several features of Angular that makes it an ideal front end JavaScript framework. Most important of
+      them are described as follows:<br>
+
+      <h6>1.Accessibility Applications</h6>
+      Angular allows creating accessible applications using ARIA-enabled components, built-in a11y test infrastructure,
+      and developer guides.<br>
+
+      <h6>2.Angular CLI</h6>
+      Angular provides support for command-line interface tools. These tools can be used for adding components, testing,
+      instant deploying, etc.<br>
+
+      <h6>3.Animation Support</h6>
+      Angular’s intuitive API allows the creation of high-performance, complex animation timelines with very little
+      code.<br>
+
+      <h6>4.Cross-Platform App Development</h6>
+      Angular can be used for building an efficient and powerful desktop, native, and progressive web apps. Angular
+      provides support for building native mobile applications using Cordova, Ionic, or NativeScript.
+
+      Angular allows creating high performance, offline, and zero-step installation progressive web apps using modern
+      web platform capabilities. The popular JS framework can also be used for building desktop apps for Linux, macOS,
+      and Windows.<br>
+
+      <h6>5.Code Generation</h6>
+      Angular is able to convert templates into highly-optimized code for modern JavaScript virtual machines.<br>
+
+
+      <h6>6.Code Splitting</h6>
+      With the new Component Router, Angular apps load quickly. The Component Router offers automatic code-splitting so
+      that only the code required to render the view that is requested by a user is loaded.<br>
+
+      <h6>7.Synergy with Popular Code Editors and IDEs</h6>
+      Angular offers code completion, instant errors, etc. with popular source code editors and IDEs.<br>
+
+      <h6>8.Templates</h6>
+      Allows creating UI views with a simple and powerful template syntax.<br>
+
+      <h6>9.Testing</h6>
+      Angular lets you carry out frequent unit tests using Karma. The Protractor allows running faster scenario tests in
+      a stable way.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 3: Could you explain services in Angular?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Singleton objects in Angular that get instantiated only once during the lifetime of an application are called
+      services. An Angular service contains methods that maintain the data throughout the life of an application.
+
+      The primary intent of an Angular service is to organize as well as share business logic, models, or data and
+      functions with various components of an Angular application.
+
+      The functions offered by an Angular service can be invoked from any Angular component, such as a controller or
+      directive.
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 4: Discuss the advantages and disadvantages of using Angular?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p> Following are the various advantages of using Angular:</p>
+      <h6> 1.Exceptional community support</h6>
+      <h6>2.Ability to add a custom directive</h6>
+      <h6>3.Facilitates client and server communication</h6>
+      <h6>4.Features strong features, such as Animation and Event Handlers</h6>
+      <h6>5.Follows the MVC pattern architecture</h6>
+      <h6>6. Offers support for static template and Angular template</h6>
+      <h6>7.Support for two-way data-binding</h6>
+      <h6>8.Supports dependency injection, RESTful services, and validations</h6><br>
+      <p> 9.Disadvantages of using Angular are enumerated as follows:</p>
+
+      <h6>1Complex SPAs can be inconvenient and laggy to use due to their size</h6>
+      <h6>2.Dynamic applications do not always perform well</h6>
+      <h6>3.Learning Angular requires a decent effort and time</h6>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 5: What is string interpolation in Angular?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Also referred to as moustache syntax, string interpolation in Angular refers to a special type of syntax that
+      makes use of template expressions in order to display the component data. These template expressions are enclosed
+      within double curly braces
+
+      The JavaScript expressions that are to be executed by Angular are added within the curly braces and the
+      corresponding output is embedded into the HTML code. Typically, these expressions are updated and registered like
+      watches as a part of the digest cycle.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 6: Explain Angular Authentication and Authorization.</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      The user login credentials are passed to an authenticate API, which is present on the server. Post server-side
+      validation of the credentials, a JWT (JSON Web Token) is returned. The JWT has information or attributes regarding
+      the current user. The user is then identified with the given JWT. This is called authentication.
+
+      Post logging-in successfully, different users have a different level of access. While some may access everything,
+      access for others might be restricted to only some resources. The level of access is authorization.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 7: Can you explain the concept of scope hierarchy in Angular?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p> Angular organizes the $scope objects into a hierarchy that is typically used by views. This is known as the
+        scope hierarchy in Angular. It has a root scope that can further contain one or several scopes called child
+        scopes.
+
+        In a scope hierarchy, each view has its own $scope. Hence, the variables set by a view’s view controller will
+        remain hidden to other view controllers. Following is a typical representation of a Scope Hierarchy:</p>
+
+      <h6> Root $scope</h6>
+      <h6> $scope for Controller 1</h6>
+      <h6> $scope for Controller 2</h6>
+      <h6> …</h6>
+      <h6> ..</h6>
+      <h6> .</h6>
+      <h6> $scope for Controller n</h6>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 8: How to generate a class in Angular 7 using CLI?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>ng generate class Dummy [options]</p>
+      This will generate a class named Dummy.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 9: How do Observables differ from Promises?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      As soon as a promise is made, the execution takes place. However, this is not the case with observables because
+      they are lazy. This means that nothing happens until a subscription is made. While promises handle a single event,
+      observable is a stream that allows passing of more than one event. A callback is made for each event in an
+      observable.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 10: Could you explain the concept of templates in Angular?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Written with HTML, templates in Angular contains Angular-specific attributes and elements. Combined with
+      information coming from the controller and model, templates are then further rendered to cater the user with the
+      dynamic view.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 11: Explain the difference between an Annotation and a Decorator in Angular?
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      In Angular, annotations are used for creating an annotation array. They are only metadata set of the class using
+      the Reflect Metadata library.
+
+      Decorators in Angular are design patterns used for separating decoration or modification of some class without
+      changing the original source code.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 12: What are directives in Angular?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Directives are one of the core features of Angular. They allow an Angular developer to write new,
+        application-specific HTML syntax. In actual, directives are functions that are executed by the Angular compiler
+        when the same finds them in the DOM. Directives are of three types:</p>
+
+      <h6>1. Attribute Directives</h6>
+      <h6>2.Component Directives</h6>
+      <h6>3.Structural Directives</h6>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 13: Please explain the differences between Angular and jQuery?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>The single biggest difference between Angular and jQuery is that while the former is a JS frontend framework,
+        the latter is a JS library. Despite this, there are some similarities between the two, such as both features DOM
+        manipulation and provides support for animation.</p>
+      Nonetheless, notable differences between Angular and jQuery are:
+      <h6>1.Angular has two-way data binding, jQuery does not</h6>
+      <h6>2.Angular provides support for RESTful API while jQuery doesn’t</h6>
+      <h6>3.jQuery doesn’t offer deep linking routing though Angular supports it</h6>
+      <h6>4.There is no form validation in jQuery whereas it is present in Angular</h6>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 14: What is Angular Material?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      It is a UI component library. Angular Material helps in creating attractive, consistent, and fully functional web
+      pages as well as web applications. It does so while following modern web design principles, including browser
+      portability and graceful degradation
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 15: What is AOT (Ahead-Of-Time) Compilation?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Each Angular app gets compiled internally. The Angular compiler takes in the JS code, compiles it and then
+      produces some JS code. This happens only once per occasion per user. It is known as AOT (Ahead-Of-Time)
+      compilation.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 16: What is the process called by which TypeScript code is converted into JavaScript
+        code?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      It is called Transpiling. Even though TypeScript is used for writing code in Angular applications, it gets
+      internally transpiled into equivalent JavaScript.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 17: Why prioritize TypeScript over JavaScript in Angular?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      TypeScript is a superset of Javascript as it is Javascript + Types or extra features like typecasting for
+      variables, annotations, variable scope and much more. The typescript is designed in a way to overcome Javascript
+      shortcomings like typecasting of variables, classes, decorators, variable scope and many more. Moreover,
+      Typescript is purely object-oriented programming that offers a "Compiler" that can convert to
+      Javascript-equivalent code.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 18: Can you draw a comparison between the service() and the factory() functions?
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Used for the business layer of the application, the service() function operates as a constructor function. The
+      function is invoked at runtime using the new keyword.
+
+      Although the factory() function works in pretty much the same way as the service() function does, the former is
+      more flexible and powerful. In actual, the factory() function are design patterns that help in creating objects.
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 19: Please explain the digest cycle in Angular?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      The process of monitoring the watchlist in order to track changes in the value of the watch variable is termed the
+      digest cycle in Angular. The previous and present versions of the scope model values are compared in each digest
+      cycle.
+
+      Although the digest cycle process gets triggered implicitly, it is possible to start it manually by using the
+      $apply() function.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Question 20: What is ngOnInit()? How to define it?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      ngOnInit() is a lifecycle hook that is called after Angular has finished initializing all data-bound properties of
+      a directive
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{userArr?.topic_name}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- [ngStyle]="{'font-size': fontSize}" -->
+<ion-content>
+
+  <div class="cntntfd" style="height:90%;overflow: scroll;">
+    <div [ngStyle]="{'font-size': fontSize+'px'}" [innerHTML]="userArr?.description">
+    </div>
+  </div>
+
+  <div class="cent" style="text-align:center;align-self: center;align-content: center;">
+    <ion-fab style="width:0px;text-align: center;">
+      <ion-button color="light" fill="clear" style="font-weight: bold;font-size:12px;" class="sizebtn">Text Size
+      </ion-button>
+      <ion-fab-list side="top" style="margin-bottom:0px;position: absolute;left: -34px;">
+        <ion-button ion-fab color="light" fill="clear" (click)="fontSizeChange(10)"
+          style="background-color:#000000 !important; color:white;">S</ion-button>
+        <ion-button ion-fab color="light" fill="clear" (click)="fontSizeChange(12)"
+          style="font-size:15px; background-color:#1e64b5; color:white;">M</ion-button>
+        <ion-button ion-fab color="light" fill="clear" (click)="fontSizeChange(14)"
+          style="font-size:22px; background-color:#1e64b5; color:white;">L</ion-button>
+        <ion-button ion-fab color="light" fill="clear" (click)="fontSizeChange(15)"
+          style="font-size:20px; font-weight:bold; background-color:#1e64b5; color:white;">XL</ion-button>
+      </ion-fab-list>
+    </ion-fab>
+  </div>
+  <div>
+    <ion-button #id2 (click)="prev(id2)" fill="clear" class="pre">Previous</ion-button>
+    <ion-button #id1 (click)="next(id1)" fill="clear" class="nxt">Next</ion-button>
+  </div>
+</ion-content>
